@@ -1,0 +1,203 @@
+import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
+// react component for creating beautiful carousel
+import Carousel from "react-slick";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+// @material-ui/icons
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+// core components
+import Header from "components/Header/Header.js";
+import Button from "components/CustomButtons/Button.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+
+import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
+
+import object from 'nailshopData';
+
+
+
+const useStyles = makeStyles(headersStyle);
+
+export default function SectionHeaders({ ...rest }) {
+  const classes = useStyles();
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false
+  };
+  return (
+    <div className="cd-section" {...rest}>
+      <div>
+        <Header
+          absolute
+          brand=""
+          color="transparent"
+          links={
+            <List className={classes.list + " " + classes.mlAuto}>
+              <ListItem className={classes.listItem}>
+                <Button
+                  href="#home"
+                  className={classes.navLink}
+                  color="transparent"
+                >
+                  Home
+                </Button>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Button
+                  href="#about"
+                  className={classes.navLink}
+                  color="transparent"
+                >
+                  About us
+                </Button>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Button
+                  href="#services"
+                  className={classes.navLink}
+                  color="transparent"
+                >
+                  Services
+                </Button>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Button
+                  href="#reservation"
+                  className={classes.navLink}
+                  color="transparent"
+                >
+                  Reservation
+                </Button>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Button
+                  href="#contact"
+                  className={classes.navLink}
+                  color="transparent"
+                >
+                  Contact us
+                </Button>
+              </ListItem>
+            </List>
+          }
+        />
+        <Carousel {...settings}>
+          {/* Carousel 1 START */}
+          <div>
+            <div
+              className={classes.pageHeader}
+              style={{ backgroundImage: `url("${object.home.image}")` }}
+            >
+              <div className={classes.container}>
+                <GridContainer>
+                  <GridItem
+                    xs={12}
+                    sm={8}
+                    md={8}
+                    className={classNames(
+                      classes.mlAuto,
+                      classes.mrAuto,
+                      classes.textCenter
+                    )}
+                  >
+                    <h3 style={{ fontFamily: 'Arizonia' }}>Welcome to </h3>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                      Where Style is Created
+                    </h6>
+                    <br />
+                    <div>
+                      <Button color="primary" size="lg" href={object.reservation.website}>
+                        <EventAvailableIcon /> Book Now
+                      </Button>
+                    </div>
+                  </GridItem>
+                </GridContainer>
+              </div>
+            </div>
+          </div>
+          {/* Carousel 1 END */}
+          {/* Carousel 2 START */}
+          <div>
+            <div
+              className={classes.pageHeader}
+              style={{ backgroundImage: `url("${object.home.image1}")` }}
+            >
+              <div className={classes.container}>
+                <GridContainer>
+                  <GridItem
+                    xs={12}
+                    sm={8}
+                    md={8}
+                    className={classNames(
+                      classes.mlAuto,
+                      classes.mrAuto,
+                      classes.textCenter
+                    )}
+                  >
+                    <h3 >Welcome to </h3>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                      Where Style is Created
+                    </h6>
+                    <br />
+                    <div>
+                      <Button color="primary" size="lg" href={object.reservation.website}>
+                        <EventAvailableIcon /> Book Now
+                      </Button>
+                    </div>
+                  </GridItem>
+                </GridContainer>
+              </div>
+            </div>
+          </div>
+          {/* Carousel 2 END */}
+          {/* Carousel 3 START */}
+          <div>
+            <div
+              className={classes.pageHeader}
+              style={{ backgroundImage: `url("${object.home.image2}")` }}
+            >
+              <div className={classes.container}>
+                <GridContainer>
+                  <GridItem
+                    xs={12}
+                    sm={8}
+                    md={8}
+                    className={classNames(
+                      classes.mlAuto,
+                      classes.mrAuto,
+                      classes.textCenter
+                    )}
+                  >
+                    <h3 >Welcome to </h3>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                      Where Style is Created
+                    </h6>
+                    <br />
+                    <div>
+                      <Button color="primary" size="lg" href={object.reservation.website}>
+                        <EventAvailableIcon /> Book Now
+                      </Button>
+                    </div>
+                  </GridItem>
+                </GridContainer>
+              </div>
+            </div>
+          </div>
+          {/* Carousel 3 END */}
+        </Carousel>
+      </div>
+    </div>
+  );
+}
