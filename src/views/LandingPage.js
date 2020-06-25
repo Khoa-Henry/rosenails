@@ -17,13 +17,12 @@ import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-import object from 'nailshopData';
 
 
 
 const useStyles = makeStyles(headersStyle);
 
-export default function SectionHeaders({ ...rest }) {
+export default function SectionHeaders(props) {
   const classes = useStyles();
   const settings = {
     dots: true,
@@ -31,10 +30,10 @@ export default function SectionHeaders({ ...rest }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: true
   };
   return (
-    <div className="cd-section" {...rest}>
+    <div className="cd-section">
       <div>
         <Header
           absolute
@@ -95,7 +94,7 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${object.home.image}")` }}
+              style={{ backgroundImage: `url("${props.object.image}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
@@ -110,13 +109,13 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <h3 style={{ fontFamily: 'Arizonia' }}>Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
                     <h6 style={{ color: "white", marginTop: "20px" }}>
                       Where Style is Created
                     </h6>
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={object.reservation.website}>
+                      <Button color="primary" size="lg" href={props.object.reservation.website}>
                         <EventAvailableIcon /> Book Now
                       </Button>
                     </div>
@@ -130,7 +129,7 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${object.home.image1}")` }}
+              style={{ backgroundImage: `url("${props.object.image1}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
@@ -145,13 +144,13 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <h3 >Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
                     <h6 style={{ color: "white", marginTop: "20px" }}>
                       Where Style is Created
                     </h6>
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={object.reservation.website}>
+                      <Button color="primary" size="lg" href={props.object.reservation.website}>
                         <EventAvailableIcon /> Book Now
                       </Button>
                     </div>
@@ -165,7 +164,7 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${object.home.image2}")` }}
+              style={{ backgroundImage: `url("${props.object.image2}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
@@ -180,13 +179,13 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <h3 >Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{object.home.name}</h1>
+                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
                     <h6 style={{ color: "white", marginTop: "20px" }}>
                       Where Style is Created
                     </h6>
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={object.reservation.website}>
+                      <Button color="primary" size="lg" href={props.object.reservation.website}>
                         <EventAvailableIcon /> Book Now
                       </Button>
                     </div>

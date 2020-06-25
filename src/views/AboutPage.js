@@ -8,15 +8,14 @@ import CardHeader from "components/Card/CardHeader.js";
 import featuresStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/featuresStyle.js";
 import Card from "components/Card/Card.js";
 
-import object from 'nailshopData';
 
 
 const useStyles = makeStyles(featuresStyle);
 
-export default function SectionFeatures({ ...rest }) {
+export default function SectionFeatures(props) {
   const classes = useStyles();
   return (
-    <div id="about" className="cd-section" style={{ minHeight: '100vh' }} {...rest}>
+    <div id="about" className="cd-section" style={{ minHeight: '100vh' }}>
       <div className={classes.blog}>
         <div className={classes.container}>
           <GridContainer>
@@ -31,11 +30,11 @@ export default function SectionFeatures({ ...rest }) {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <img src={object.about.image} alt="..." />
+                      <img src={props.object.about.image} alt="..." />
                       <div
                         className={classes.coloredShadow}
                         style={{
-                          backgroundImage: `("${object.about.image}")`,
+                          backgroundImage: `("${props.object.about.image}")`,
                           opacity: "1"
                         }}
                       />
@@ -43,7 +42,7 @@ export default function SectionFeatures({ ...rest }) {
                   </GridItem>
                   <GridItem xs={12} sm={6} md={6}>
                     <h5 className={classes.cardTitle} style={{ color: "purple" }}>
-                      {object.about.description}
+                      {props.object.about.description}
                     </h5>
                   </GridItem>
                 </GridContainer>

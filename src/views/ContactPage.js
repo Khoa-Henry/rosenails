@@ -25,15 +25,14 @@ import CardBody from "components/Card/CardBody.js";
 
 import contactsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js";
 
-import object from 'nailshopData';
 
 const useStyles = makeStyles(contactsStyle);
 
 const RegularMap = withScriptjs(
-  withGoogleMap(() => (
+  withGoogleMap((props) => (
     <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: 43.134312, lng: -88.005608 - 0.02 }}
+      defaultZoom={16}
+      defaultCenter={{ lat: props.lat, lng: props.lng - 0.005 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true,
@@ -99,29 +98,31 @@ const RegularMap = withScriptjs(
         ]
       }}
     >
-      <Marker position={{ lat: 43.134312, lng: -88.005608 }} ></Marker>
+      <Marker position={{ lat: props.lat, lng: props.lng }} ></Marker>
     </GoogleMap>
   ))
 );
 
-export default function SectionContacts({ ...rest }) {
+export default function SectionContacts(props) {
   const [checked, setChecked] = React.useState([]);
-  const handleToggle = value => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-    setChecked(newChecked);
-  };
+  // const handleToggle = value => {
+  //   const currentIndex = checked.indexOf(value);
+  //   const newChecked = [...checked];
+  //   if (currentIndex === -1) {
+  //     newChecked.push(value);
+  //   } else {
+  //     newChecked.splice(currentIndex, 1);
+  //   }
+  //   setChecked(newChecked);
+  // };
   const classes = useStyles();
   return (
-    <div id="contact" className="cd-section" {...rest}>
+    <div id="contact" className="cd-section">
       <div className={classes.contacts2}>
         <div className={classes.map}>
           <RegularMap
+            lat={props.object.lat}
+            lng={props.object.lng}
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb_ZjLtVTvwlhdJ2xk4Kajd_-dq8p9VhE&libraries=places"
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={
@@ -149,7 +150,7 @@ export default function SectionContacts({ ...rest }) {
                     title="Phone"
                     description={
                       <span>
-                        {object.contact.phone}
+                        {props.object.contactNumber}
                       </span>
                     }
                     icon={Phone}
@@ -163,8 +164,7 @@ export default function SectionContacts({ ...rest }) {
                     title="Address"
                     description={
                       <span>
-                        {object.contact.address}
-                        <br /> {object.contact.city}
+                        {props.object.address}
                       </span>
                     }
                     icon={PinDrop}
@@ -172,48 +172,25 @@ export default function SectionContacts({ ...rest }) {
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={12}>
-                  <GridItem>
-                    <InfoArea
-                      className={classes.infoArea2}
-                      title="Hours of Operation"
-                      description={
-                        <table>
-                          <tbody>
+
+                  <InfoArea
+                    className={classes.infoArea2}
+                    title="Hours of Operation"
+                    description={
+                      <table>
+                        <tbody>
+                          {Object.keys(props.object.hours).map(i => (
                             <tr>
-                              <td>{object.contact.day}</td>
-                              <td>{object.contact.hour}</td>
+                              <td>{i}</td>
+                              <td>{props.object.hours[i]}</td>
                             </tr>
-                            <tr>
-                              <td>{object.contact.day1}</td>
-                              <td>{object.contact.hour1}</td>
-                            </tr>
-                            <tr>
-                              <td>{object.contact.day2}</td>
-                              <td>{object.contact.hour2}</td>
-                            </tr>
-                            <tr>
-                              <td>{object.contact.day3}</td>
-                              <td>{object.contact.hour3}</td>
-                            </tr>
-                            <tr>
-                              <td>{object.contact.day4}</td>
-                              <td>{object.contact.hour4}</td>
-                            </tr>
-                            <tr>
-                              <td>{object.contact.day5}</td>
-                              <td>{object.contact.hour5}</td>
-                            </tr>
-                            <tr>
-                              <td>{object.contact.day6}</td>
-                              <td>{object.contact.hour6}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      }
-                      icon={BusinessCenter}
-                      iconColor="primary"
-                    />
-                  </GridItem>
+                          ))}
+                        </tbody>
+                      </table>
+                    }
+                    icon={BusinessCenter}
+                    iconColor="primary"
+                  />
                 </GridItem>
               </GridContainer>
             </CardBody>
