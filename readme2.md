@@ -10,3 +10,6 @@ this builds the s3 and cloudfront
 
 
 now you need to upload the app files to s3, run deploytos3.ps1 this installs node packages, builds the app then uploads the built file to s3. You need to install aws cli and run aws configure to setup your login credentials first.
+
+
+to only update the cloudfront deployment and keep the infrastructure, please run updateCloudfront.ps1
