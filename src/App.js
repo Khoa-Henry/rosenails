@@ -94,7 +94,7 @@ class App extends React.Component {
       "website": "https://www.smallneighborhood.com/magicalnailsmilwaukee#booking",
       "image": bg0
     },
-    "contactNumber": "(414) 306-2025",
+    "contactNumber": "(414) 353 - 2146",
     "address": "6410 N 76th St, Milwaukee, WI 53223",
     "hours": {
       "Monday": "9:00 AM - 7:00 PM",

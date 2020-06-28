@@ -32,6 +32,14 @@ export default function CustomTable(props) {
   const classes = useStyles();
   return (
     <div className={classes.tableResponsive}>
+      <style>
+        {`
+        .MuiTableCell-body{
+          font-size: medium;
+          font-weight: 500;
+        }
+        `}
+      </style>
       <Table className={classes.table}>
         {tableHead !== undefined ? (
           <TableHead className={classes[tableHeaderColor]}>

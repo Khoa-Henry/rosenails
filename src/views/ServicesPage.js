@@ -23,11 +23,11 @@ export default function BlogPostsPage(props) {
   const classes = useStyles();
 
   return (
-    <div id="services" className={classes.main} style={{ marginBottom: '5%' }}>
+    <div id="services" className={classes.main} style={{ marginBottom: '5vh', minHeight: '80vh' }}>
       <div className={classes.container}>
         <h2 className={classes.title} style={{ textAlign: "center", color: "#3C4858" }}>Services</h2>
         <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={8} className={classes.textCenter}>
+          <GridItem xs={12} sm={12} md={6} className={classes.textCenter}>
             <NavPills
               alignCenter
               tabs={props.object.services.map(item => {

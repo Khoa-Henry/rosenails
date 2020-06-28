@@ -149,7 +149,7 @@ export default function SectionContacts(props) {
                     className={classes.infoArea2}
                     title="Phone"
                     description={
-                      <span>
+                      <span style={{ color: '#565656' }}>
                         {props.object.contactNumber}
                       </span>
                     }
@@ -163,7 +163,7 @@ export default function SectionContacts(props) {
                     className={classes.infoArea2}
                     title="Address"
                     description={
-                      <span>
+                      <span style={{ color: '#565656' }}>
                         {props.object.address}
                       </span>
                     }
@@ -175,13 +175,13 @@ export default function SectionContacts(props) {
 
                   <InfoArea
                     className={classes.infoArea2}
-                    title="Hours of Operation"
+                    title="Business Hours"
                     description={
                       <table>
                         <tbody>
                           {Object.keys(props.object.hours).map(i => (
-                            <tr>
-                              <td>{i}</td>
+                            <tr style={{ color: '#565656' }}>
+                              <td >{i}</td>
                               <td>{props.object.hours[i]}</td>
                             </tr>
                           ))}

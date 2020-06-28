@@ -40,7 +40,7 @@ export default function SectionHeaders(props) {
               >
                 <i className="fas fa-ticket-alt" />
                 Reserve Now
-                </Button>
+              </Button>
             </GridItem>
           </GridContainer>
         </div>

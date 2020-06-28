@@ -46,6 +46,7 @@ export default function SectionHeaders(props) {
                   href="#home"
                   className={classes.navLink}
                   color="transparent"
+                  size="lg"
                 >
                   Home
                 </Button>
@@ -55,6 +56,7 @@ export default function SectionHeaders(props) {
                   href="#about"
                   className={classes.navLink}
                   color="transparent"
+                  size="lg"
                 >
                   About us
                 </Button>
@@ -64,6 +66,7 @@ export default function SectionHeaders(props) {
                   href="#services"
                   className={classes.navLink}
                   color="transparent"
+                  size="lg"
                 >
                   Services
                 </Button>
@@ -73,6 +76,7 @@ export default function SectionHeaders(props) {
                   href="#reservation"
                   className={classes.navLink}
                   color="transparent"
+                  size="lg"
                 >
                   Reservation
                 </Button>
@@ -82,6 +86,7 @@ export default function SectionHeaders(props) {
                   href="#contact"
                   className={classes.navLink}
                   color="transparent"
+                  size="lg"
                 >
                   Contact us
                 </Button>
