@@ -1,12 +1,4 @@
-npm install
-
-npm run build
-
-#need to install aws cli
-#needs to login to aws configure
-aws s3 cp build s3://magicalnailsmilwaukee.com --recursive
-aws s3 cp build s3://www.magicalnailsmilwaukee.com --recursive
-
+#Create an object by querying the list of distributions by domain name. Include the two addresses, i.e www.example.com or example.com this can be passed later
 $listObject = aws cloudfront list-distributions --output text --query "DistributionList.Items[].{DistributionId: Id, OriginDomainName: Origins.Items[0].DomainName}[?contains(OriginDomainName, 'magicalnailsmilwaukee.com'||'www.magicalnailsmilwaukee.com')]"
 
 For ($i=0; $i -lt $listObject.length; $i++) {
