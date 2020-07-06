@@ -6,13 +6,12 @@ import ReservationPage from 'views/ReservationPage';
 import ContactPage from 'views/ContactPage';
 import Footer from 'views/Footer';
 
-import bg from "images/bg.jpeg";
-import bg2 from "images/bg2.jpg";
-import bg1 from "images/bg1.jpg";
-import bg0 from "images/bg0.jpg";
-import vertical from "images/vertical.png";
 
-
+import landing1 from "assets/images/landing1.jpg";
+import landing2 from "assets/images/landing2.jpeg";
+import landing3 from "assets/images/landing3.jpg";
+import reservation1 from "assets/images/reservation1.jpg";
+import about1 from "assets/images/about1.jpg";
 
 class App extends React.Component {
 
@@ -21,12 +20,12 @@ class App extends React.Component {
     "name": "Magical Nails",
     "lat": 43.134312, "lng": -88.005608,
 
-    "image": bg,
-    "image1": bg2,
-    "image2": bg1,
+    "image": landing1,
+    "image1": landing2,
+    "image2": landing3,
     "about": {
       "description": "Magical Nails is a Milwaukee beauty professional specializing in nails, waxing, and lashes. Our goal is to have every client walk away feeling more beautiful and confident. Our enthusiastic, professional technicians with immensely experienced always ensure to bring you an impressive beauty, whether you’re preparing for a special event or just know it’s time to treat yourself.",
-      "image": vertical
+      "image": about1
     },
     "services": [
       {
@@ -92,7 +91,7 @@ class App extends React.Component {
     "reservation": {
       "description": "Our salon is the perfect place to host a party, corporate event or a just a get-together for friends, family, and co-workers. We have a beautiful and accommodating space, affordable prices to fit everyone's budget, and a large team of technicians to serve your needs so you and your guests can relax and enjoy the party.",
       "website": "https://www.smallneighborhood.com/magicalnailsmilwaukee#booking",
-      "image": bg0
+      "image": reservation1
     },
     "contactNumber": "(414) 353 - 2146",
     "address": "6410 N 76th St, Milwaukee, WI 53223",
@@ -103,14 +102,13 @@ class App extends React.Component {
       "Thursday": "9:00 AM - 7:00 PM",
       "Friday": "9:00 AM - 7:00 PM",
       "Saturday": "9:00 AM - 7:00 PM",
-      "Sunday": "10:00 AM - 4:30PM"
+      "Sunday": "10:00 AM - 4:30PM",
     }
   }
 
   componentDidMount() {
     document.title = this.state.name
   }
-
 
 
   render() {
@@ -121,7 +119,7 @@ class App extends React.Component {
         <ServicesPage object={this.state} />
         <ReservationPage object={this.state} />
         <ContactPage object={this.state} />
-        <Footer />
+        <Footer object={this.state} />
       </>
     )
   }

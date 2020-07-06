@@ -1,15 +1,10 @@
 import React from "react";
-
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// core components
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
-
-
 
 
 const useStyles = makeStyles(headersStyle);
@@ -25,18 +20,17 @@ export default function SectionHeaders(props) {
       >
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>Host A Party?</h1>
-              <h4>
+            <GridItem xs={12} sm={6} md={6} className={classes.mlAuto}>
+              <h2 className={classes.title.mlAuto} style={{ color: 'white' }}>Host A Party?</h2>
+              <h5 style={{ color: 'white' }}>
                 {props.object.reservation.description}
-              </h4>
+              </h5>
               <br />
               <Button
                 color="primary"
                 size="lg"
+                target="blank"
                 href={props.object.reservation.website}
-                target="_blank"
-                rel=""
               >
                 <i className="fas fa-ticket-alt" />
                 Reserve Now

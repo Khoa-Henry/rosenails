@@ -1,22 +1,17 @@
 import React from "react";
-// nodejs library that concatenates classes
+
 import classNames from "classnames";
-// react component for creating beautiful carousel
 import Carousel from "react-slick";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-// core components
+
 import Header from "components/Header/Header.js";
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
-
 
 
 
@@ -47,8 +42,9 @@ export default function SectionHeaders(props) {
                   className={classes.navLink}
                   color="transparent"
                   size="lg"
+
                 >
-                  Home
+                  <h6 style={{ margin: 0, fontWeight: 600 }}>Home</h6>
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
@@ -58,7 +54,7 @@ export default function SectionHeaders(props) {
                   color="transparent"
                   size="lg"
                 >
-                  About us
+                  <h6 style={{ margin: 0, fontWeight: 600 }}>About us</h6>
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
@@ -68,7 +64,7 @@ export default function SectionHeaders(props) {
                   color="transparent"
                   size="lg"
                 >
-                  Services
+                  <h6 style={{ margin: 0, fontweight: 600 }}>Services</h6>
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
@@ -78,7 +74,7 @@ export default function SectionHeaders(props) {
                   color="transparent"
                   size="lg"
                 >
-                  Reservation
+                  <h6 style={{ margin: 0, fontWeight: 600 }}>Reservation</h6>
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
@@ -88,7 +84,7 @@ export default function SectionHeaders(props) {
                   color="transparent"
                   size="lg"
                 >
-                  Contact us
+                  <h6 style={{ margin: 0, fontweight: 600 }}>Contact Us</h6>
                 </Button>
               </ListItem>
             </List>
@@ -113,17 +109,21 @@ export default function SectionHeaders(props) {
                       classes.textCenter
                     )}
                   >
-                    <h3 style={{ fontFamily: 'Arizonia' }}>Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
-                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                    <h3 style={{ fontFamily: 'Arizonia', marginBottom: 0 }}>Welcome to </h3>
+                    <h1 style={{ marginTop: 0, marginBottom: '1vh' }} className={classes.title}>{props.object.name}</h1>
+                    <h5 style={{ color: '#f56efa', marginTop: 0 }}>
                       Where Style is Created
-                    </h6>
+                    </h5>
+                    <br />
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={props.object.reservation.website}>
-                        <EventAvailableIcon /> Book Now
+                      <Button color="primary" size="lg" target="blank"
+                        href={props.object.reservation.website}>
+                        <i class="far fa-calendar-alt" />
+                        Book Now
                       </Button>
                     </div>
+
                   </GridItem>
                 </GridContainer>
               </div>
@@ -149,14 +149,17 @@ export default function SectionHeaders(props) {
                     )}
                   >
                     <h3 >Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
-                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                    <h1 style={{ marginTop: 0, marginBottom: '1vh' }} className={classes.title}>{props.object.name}</h1>
+                    <h5 style={{ color: '#d800ff', marginTop: 0 }}>
                       Where Style is Created
-                    </h6>
+                    </h5>
+                    <br />
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={props.object.reservation.website}>
-                        <EventAvailableIcon /> Book Now
+                      <Button color="primary" size="lg" target="blank"
+                        href={props.object.reservation.website}>
+                        <i class="far fa-calendar-alt" />
+                        Book Now
                       </Button>
                     </div>
                   </GridItem>
@@ -184,14 +187,17 @@ export default function SectionHeaders(props) {
                     )}
                   >
                     <h3 >Welcome to </h3>
-                    <h1 style={{ marginTop: "0px" }} className={classes.title}>{props.object.name}</h1>
-                    <h6 style={{ color: "white", marginTop: "20px" }}>
+                    <h1 style={{ marginTop: 0, marginBottom: '1vh' }} className={classes.title}>{props.object.name}</h1>
+                    <h5 style={{ color: '#e03bff', marginTop: 0 }}>
                       Where Style is Created
-                    </h6>
+                    </h5>
+                    <br />
                     <br />
                     <div>
-                      <Button color="primary" size="lg" href={props.object.reservation.website}>
-                        <EventAvailableIcon /> Book Now
+                      <Button color="primary" size="lg" target="blank"
+                        href={props.object.reservation.website}>
+                        <i class="far fa-calendar-alt" />
+                        Book Now
                       </Button>
                     </div>
                   </GridItem>

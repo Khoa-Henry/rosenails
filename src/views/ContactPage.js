@@ -1,20 +1,16 @@
 import React from "react";
-// react components used to create a google map
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker
 } from "react-google-maps";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
+import { makeStyles } from "@material-ui/core/styles";
 import PinDrop from "@material-ui/icons/PinDrop";
 import Phone from "@material-ui/icons/Phone";
 import BusinessCenter from "@material-ui/icons/BusinessCenter";
 
-// core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
@@ -172,7 +168,6 @@ export default function SectionContacts(props) {
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={12}>
-
                   <InfoArea
                     className={classes.infoArea2}
                     title="Business Hours"
