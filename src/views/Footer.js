@@ -5,12 +5,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 import productStyle from "assets/jss/material-kit-pro-react/views/productStyle.js";
-
+import data from 'data.json';
 
 
 const useStyles = makeStyles(productStyle);
 
-export default function FooterPage(props) {
+export default function FooterPage() {
   const classes = useStyles();
 
   return (
@@ -18,20 +18,6 @@ export default function FooterPage(props) {
       <Footer
         theme="dark"
         content={
-          // <div>
-          //   <div className={classes.left}>
-          //     <a
-          //       href="https://www.smallneighborhood.com"
-          //       className={classes.footerBrand}
-          //     >
-          //       SMALLNEIGHBORHOOD
-          //   </a>
-          //   </div>
-          //   <div className={classes.right}>
-          //     Copyright &copy;  {1900 + new Date().getYear()} {props.object.name}. All Rights Reserved.
-          //   </div>
-          // </div>
-
           <div>
             <div className={classes.left}>
               <List className={classes.list}>
@@ -48,7 +34,7 @@ export default function FooterPage(props) {
             </div>
             <div className={classes.right}>
               Copyright &copy; {1900 + new Date().getYear()}{" "}
-              {props.object.name}.
+              {data.name}.
               All Rights Reserved.
             </div>
           </div>

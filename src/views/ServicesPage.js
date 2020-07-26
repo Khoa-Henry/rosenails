@@ -9,11 +9,11 @@ import CustomLinearProgress from "components/CustomLinearProgress/CustomLinearPr
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 
-
+import data from 'data.json';
 
 const useStyles = makeStyles(blogPostsPageStyle);
 
-export default function BlogPostsPage(props) {
+export default function BlogPostsPage() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -23,7 +23,15 @@ export default function BlogPostsPage(props) {
   return (
     <div id="services" className={classes.main} style={{ marginTop: '1vh', marginBottom: '1vh', minHeight: '70vh' }}>
       <div className={classes.container}>
-        <h3 className={classes.title} style={{ textAlign: "center", color: "#3C4858", paddingTop: '5vh', marginTop: 0, marginBottom: '4vh' }}>Services
+        <h3
+          className={classes.title}
+          style={{
+            textAlign: "center",
+            color: data.color.word4,
+            paddingTop: '5vh',
+            marginTop: 0, marginBottom: '4vh'
+          }}
+        > Services
         <GridContainer>
             <GridItem xs={12} sm={4} md={4} />
             <GridItem xs={12} sm={4} md={4} >
@@ -39,7 +47,7 @@ export default function BlogPostsPage(props) {
           <GridItem xs={12} sm={12} md={6} className={classes.textCenter}>
             <NavPills
               alignCenter
-              tabs={props.object.services.map(item => {
+              tabs={data.services.map(item => {
                 let tabButton = item.type
                 let tabContent = <Table
                   tableData={item.services.map(i => [i.name, `$${i.price}`])}

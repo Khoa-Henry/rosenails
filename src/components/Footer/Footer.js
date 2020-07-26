@@ -1,15 +1,9 @@
-/* eslint-disable */
 import React from "react";
-// nodejs library to set properties for components
+
 import PropTypes from "prop-types";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+
 
 import styles from "assets/jss/material-kit-pro-react/components/footerStyle.js";
 
@@ -39,8 +33,8 @@ export default function Footer(props) {
             <hr />
           </div>
         ) : (
-          " "
-        )}
+            " "
+          )}
         {content}
         <div className={classes.clearFix} />
       </div>

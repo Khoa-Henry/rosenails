@@ -1,21 +1,19 @@
 import React from "react";
-// nodejs library that concatenates classes
+
 import classNames from "classnames";
-// nodejs library to set properties for components
+
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 
-// core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import styles from "assets/jss/material-kit-pro-react/components/navPillsStyle.js";
-
+import data from 'data.json'
 const useStyles = makeStyles(styles);
 
 export default function NavPills(props) {
@@ -101,7 +99,7 @@ export default function NavPills(props) {
 
 NavPills.defaultProps = {
   active: 0,
-  color: "primary"
+  color: data.color.navpill //color
 };
 
 NavPills.propTypes = {

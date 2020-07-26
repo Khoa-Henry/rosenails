@@ -17,7 +17,7 @@ import InfoArea from "components/InfoArea/InfoArea.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
-
+import data from 'data.json';
 
 import contactsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js";
 
@@ -25,10 +25,10 @@ import contactsStyle from "assets/jss/material-kit-pro-react/views/sectionsSecti
 const useStyles = makeStyles(contactsStyle);
 
 const RegularMap = withScriptjs(
-  withGoogleMap((props) => (
+  withGoogleMap(() => (
     <GoogleMap
       defaultZoom={16}
-      defaultCenter={{ lat: props.lat, lng: props.lng - 0.005 }}
+      defaultCenter={{ lat: data.lat, lng: data.lng - 0.005 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true,
@@ -94,31 +94,32 @@ const RegularMap = withScriptjs(
         ]
       }}
     >
-      <Marker position={{ lat: props.lat, lng: props.lng }} ></Marker>
+      <Marker position={{ lat: data.lat, lng: data.lng }} ></Marker>
     </GoogleMap>
   ))
 );
 
-export default function SectionContacts(props) {
+export default function SectionContacts() {
   const [checked, setChecked] = React.useState([]);
-  // const handleToggle = value => {
-  //   const currentIndex = checked.indexOf(value);
-  //   const newChecked = [...checked];
-  //   if (currentIndex === -1) {
-  //     newChecked.push(value);
-  //   } else {
-  //     newChecked.splice(currentIndex, 1);
-  //   }
-  //   setChecked(newChecked);
-  // };
+  const handleToggle = value => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+    setChecked(newChecked);
+  };
+
   const classes = useStyles();
   return (
     <div id="contact" className="cd-section">
       <div className={classes.contacts2}>
         <div className={classes.map}>
           <RegularMap
-            lat={props.object.lat}
-            lng={props.object.lng}
+            lat={data.lat}
+            lng={data.lng}
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb_ZjLtVTvwlhdJ2xk4Kajd_-dq8p9VhE&libraries=places"
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={
@@ -135,7 +136,7 @@ export default function SectionContacts(props) {
         </div>
         <GridItem xs={12} sm={6} md={4}>
           <Card className={classes.card2}>
-            <CardHeader contact color="primary" className={classes.textCenter}>
+            <CardHeader contact className={classes.textCenter} style={{ backgroundColor: data.color.theme }}>
               <h4 className={classes.cardTitle}>Contact Us</h4>
             </CardHeader>
             <CardBody >
@@ -145,8 +146,8 @@ export default function SectionContacts(props) {
                     className={classes.infoArea2}
                     title="Phone"
                     description={
-                      <span style={{ color: '#565656' }}>
-                        {props.object.contactNumber}
+                      <span style={{ color: data.color.word6 }}>
+                        {data.contactNumber}
                       </span>
                     }
                     icon={Phone}
@@ -159,8 +160,8 @@ export default function SectionContacts(props) {
                     className={classes.infoArea2}
                     title="Address"
                     description={
-                      <span style={{ color: '#565656' }}>
-                        {props.object.address}
+                      <span style={{ color: data.color.word6 }}>
+                        {data.address}
                       </span>
                     }
                     icon={PinDrop}
@@ -174,10 +175,10 @@ export default function SectionContacts(props) {
                     description={
                       <table>
                         <tbody>
-                          {Object.keys(props.object.hours).map(i => (
-                            <tr style={{ color: '#565656' }}>
+                          {Object.keys(data.hours).map(i => (
+                            <tr style={{ color: data.color.word6 }}>
                               <td >{i}</td>
-                              <td>{props.object.hours[i]}</td>
+                              <td>{data.hours[i]}</td>
                             </tr>
                           ))}
                         </tbody>
