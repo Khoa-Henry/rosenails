@@ -28,7 +28,7 @@ const RegularMap = withScriptjs(
   withGoogleMap(() => (
     <GoogleMap
       defaultZoom={16}
-      defaultCenter={{ lat: data.lat, lng: data.lng - 0.005 }}
+      defaultCenter={{ lat: Number(data.lat), lng: Number(data.lng) - 0.005 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true,
@@ -94,7 +94,7 @@ const RegularMap = withScriptjs(
         ]
       }}
     >
-      <Marker position={{ lat: data.lat, lng: data.lng }} ></Marker>
+      <Marker position={{ lat: Number(data.lat), lng: Number(data.lng) }} ></Marker>
     </GoogleMap>
   ))
 );
