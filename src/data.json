@@ -1,42 +1,62 @@
 {
-  "BusinessID": "ex: magicalnailsmilwaukee",
-  "name": "ex: Magical Nails",
-  "lat": "ex: 43.134312",
-  "lng": "ex: -88.005608",
+  "BusinessID": "Rose Nails, Spa & Lashes",
+  "name": "Rose Nails, Spa & Lashes",
+  "lat": "43.06578",
+  "lng": "-87.98235",
 
   "image1": "slide image here",
   "image2": "",
   "image3": "",
 
   "about": {
-    "description": "ex: Magical Nails is a Milwaukee beauty professional specializing in nails, waxing, and lashes. Our goal is to have every client walk away feeling more beautiful and confident. Our enthusiastic, professional technicians with immensely experienced always ensure to bring you an impressive beauty, whether you’re preparing for a special event or just know it’s time to treat yourself.",
+    "description": "Rose Nails, Spa & Lashes is a Milwaukee beauty professional specializing in nails, waxing, and lashes. Our goal is to have every client walk away feeling more beautiful and confident. Our enthusiastic, professional technicians with immensely experienced always ensure to bring you an impressive beauty, whether you’re preparing for a special event or just know it’s time to treat yourself.",
     "image": "vertical image"
   },
 
   "services": [{
       "services": [{
-          "name": "Basic",
-          "price": 15
-        },
-        {
-          "name": "Delux",
-          "price": 25
+          "name": "Ombre Nails",
+          "price": 65
         },
         {
           "name": "Dipping Powder",
+          "price": 38
+        },
+        {
+          "name": "Gel Full-set",
           "price": 35
         },
         {
-          "name": "Full-set",
-          "price": 35
+          "name": "Gel Fill",
+          "price": 30
         },
         {
-          "name": "Fill",
-          "price": 25
+          "name": "Gel Manicure",
+          "price": 30
         },
         {
-          "name": "Shellac",
-          "price": 25
+          "name": "Gel Polish Change",
+          "price": 22
+        },
+        {
+          "name": "Arcylic Full-set",
+          "price": 28
+        },
+        {
+          "name": "Arcylic Fill",
+          "price": 20
+        },
+        {
+          "name": "Reqular Manicure",
+          "price": 15
+        },
+        {
+          "name": "Regular Medi-Pedi Combo",
+          "price": 40
+        },
+        {
+          "name": "Regular Polish Change",
+          "price": 10
         }
       ],
       "type": "Manicure"
@@ -44,49 +64,77 @@
     {
       "services": [{
           "name": "Basic",
-          "price": 25
+          "price": 30
         },
         {
           "name": "Delux",
-          "price": 35
+          "price": 40
         },
         {
-          "name": "Shellac",
-          "price": 45
+          "name": "Basic Gel",
+          "price": 40
+        },
+        {
+          "name": "Delux Gel",
+          "price": 50
+        },
+        {
+          "name": "Luxury Gel + Paraffin",
+          "price": 60
         }
       ],
       "type": "Pedicure"
     },
     {
       "services": [{
-          "name": "Eyebrows wax",
+          "name": "Eyelashes",
+          "price": 25
+        },
+        {
+          "name": "Eyelash Strips",
           "price": 10
         },
         {
-          "name": "Eyelash extension",
-          "price": 25
+          "name": "Eyebrow Tint",
+          "price": 18
+        },
+        {
+          "name": "Eyebrow",
+          "price": 10
+        },
+        {
+          "name": "Lip",
+          "price": 6
+        },
+        {
+          "name": "Cheeks (Chin)",
+          "price": 8
+        },
+        {
+          "name": "Under Arm",
+          "price": 16
         }
       ],
-      "type": "Eyes"
+      "type": "Facial & Waxing"
     }
   ],
 
   "reservation": {
-    "description": "ex: Our salon is the perfect place to host a party, corporate event or a just a get-together for friends, family, and co-workers. We have a beautiful and accommodating space, affordable prices to fit everyone's budget, and a large team of technicians to serve your needs so you and your guests can relax and enjoy the party.",
-    "website": "ex: https://www.smallneighborhood.com/magicalnailsmilwaukee#booking",
-    "image": "ex: https://imagestorage-businesswebsite.s3.us-east-2.amazonaws.com/nail-website-images/landing-colorful-model-1.jpg"
+    "description": "Our salon is the perfect place to host a party, corporate event or a just a get-together for friends, family, and co-workers. We have a beautiful and accommodating space, affordable prices to fit everyone's budget, and a large team of technicians to serve your needs so you and your guests can relax and enjoy the party.",
+    "website": "https://www.smallneighborhood.com/magicalnailsmilwaukee#booking",
+    "image": "https://imagestorage-businesswebsite.s3.us-east-2.amazonaws.com/nail-website-images/landing-colorful-model-1.jpg"
   },
 
-  "contactNumber": "ex: (414) 353 - 2146",
-  "address": "ex: 6410 N 76th St, Milwaukee, WI 53223",
+  "contactNumber": "(414)-210-3912",
+  "address": "5514 W Lisbon Ave, Milwaukee, WI 53210",
   "hours": {
-    "Monday": "ex: 9:00 AM - 7:00 PM",
-    "Tuesday": "9:00 AM - 7:00 PM",
-    "Wednesday": "9:00 AM - 7:00 PM",
-    "Thursday": "9:00 AM - 7:00 PM",
-    "Friday": "9:00 AM - 7:00 PM",
-    "Saturday": "9:00 AM - 7:00 PM",
-    "Sunday": "10:00 AM - 4:30PM"
+    "Monday": "9:30 AM - 7:00 PM",
+    "Tuesday": "9:30 AM - 7:00 PM",
+    "Wednesday": "9:30 AM - 7:00 PM",
+    "Thursday": "9:30 AM - 7:00 PM",
+    "Friday": "9:30 AM - 7:00 PM",
+    "Saturday": "9:30 AM - 7:00 PM",
+    "Sunday": "11:00 AM - 4:00PM"
   },
 
   "color": {

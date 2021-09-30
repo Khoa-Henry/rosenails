@@ -10,6 +10,9 @@ import Header from "components/Header/Header.js";
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import landing1 from '../assets/images/landing1.jpg';
+import landing2 from '../assets/images/landing2.jpeg';
+import landing3 from '../assets/images/landing3.jpg';
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 import data from 'data.json';
@@ -95,7 +98,7 @@ export default function SectionHeaders() {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${data.image1}")` }}
+              style={{ backgroundImage: `url("${landing1}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
@@ -116,16 +119,7 @@ export default function SectionHeaders() {
                     </h5>
                     <br />
                     <br />
-                    <div>
-                      <Button size="lg" target="blank"
-                        href={data.reservation.website}
-                        style={{ backgroundColor: data.color.theme }}
-                      >
-                        <i class="far fa-calendar-alt" />
-                        Book Now
-                      </Button>
-                    </div>
-
+                    
                   </GridItem>
                 </GridContainer>
               </div>
@@ -136,7 +130,7 @@ export default function SectionHeaders() {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${data.image2}")` }}
+              style={{ backgroundImage: `url("${landing2}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
@@ -157,7 +151,7 @@ export default function SectionHeaders() {
                     </h5>
                     <br />
                     <br />
-                    <div>
+                    {/* <div>
                       <Button size="lg" target="blank"
                         href={data.reservation.website}
                         style={{ backgroundColor: data.color.theme }}
@@ -165,7 +159,7 @@ export default function SectionHeaders() {
                         <i class="far fa-calendar-alt" />
                         Book Now
                       </Button>
-                    </div>
+                    </div> */}
                   </GridItem>
                 </GridContainer>
               </div>
@@ -176,7 +170,7 @@ export default function SectionHeaders() {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${data.image3}")` }}
+              style={{ backgroundImage: `url("${landing3}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>

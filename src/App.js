@@ -17,7 +17,7 @@ class App extends React.Component {
         <LandingPage />
         <AboutPage />
         <ServicesPage />
-        <ReservationPage />
+        {/* <ReservationPage /> */}
         <ContactPage />
         <Footer />
       </>

@@ -137,7 +137,7 @@ export default function SectionContacts() {
         <GridItem xs={12} sm={6} md={4}>
           <Card className={classes.card2}>
             <CardHeader contact className={classes.textCenter} style={{ backgroundColor: data.color.theme }}>
-              <h4 className={classes.cardTitle}>Contact Us</h4>
+              <h4 className={classes.cardTitle} style={{color: 'black', fontSize: '3rem', paddingTop:'30px'}}>Contact Us</h4>
             </CardHeader>
             <CardBody >
               <GridContainer>
